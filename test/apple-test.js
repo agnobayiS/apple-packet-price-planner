@@ -1,109 +1,63 @@
-describe("The invelid massages",function(){
+describe("The text box",function(){
 
-    it("should display (please enter a valid name) if the are numbers in the name and lanuge is english",function(){
+    it("should display the amout cost per box",function(){
 
-        const passedNames = greeting()
-        assert.equal("Please enter a valid name",passedNames.invelidName("Siyabonga32","english") )
-
-
-
-
-    });
-    it("should display (nceda ngenisa igama) if the are numbers in the name and lanuge is xhosa",function(){
-
-        const passedNames = greeting()
-        assert.equal("Nceda ngenisa igama",passedNames.invelidName("Siyabonga32","isixhosa") )
+        const passednumber = apple()
+        assert.equal(55,passednumber.cost1(55) )
 
 
 
 
     });
-    it("should display (Voer asseblief n naam in) if the are numbers in the name and lanuge is afrikaans",function(){
+    it("should display the number of Apple in the box",function(){
 
-        const passedNames = greeting()
-        assert.equal("Voer asseblief n naam in",passedNames.invelidName("Siyabonga32","afrikaans") )
-
-
-
-
-    });
-
-
-});
-
-describe("The Greeting massages",function(){
-
-    it("should display (Hello and name) if the name is passed in and the lanuge is english",function(){
-
-        const passedNames = greeting()
-        assert.equal("Hello, Siyabonga",passedNames.velidName("Siyabonga","english") )
+        const passednumber = apple()
+        assert.equal(55,passednumber.ApplesInTheBox(55) )
 
 
 
 
     });
-    it("should display (mholo and name) if the name is passed in and the lanuge is xhosa",function(){
+    it("should display how many apples she wants to sell",function(){
 
-        const passedNames = greeting()
-        assert.equal("Mholo, Aphiwe",passedNames.velidName("Aphiwe","isixhosa") )
-
-
-
-
-    });
-    it("should display (Hallo and name) if the name is passed in and the lanuge is english",function(){
-
-        const passedNames = greeting()
-        assert.equal("Hallo, Siyabonga",passedNames.velidName("Siyabonga","afrikaans") )
+        const passednumber = apple()
+        assert.equal(55,passednumber.packet(55) )
 
 
 
 
     });
-    
+    it("shoud desplay the pasantage of profit expected  ",function(){
 
-});
-
-describe("Select languge massages",function(){
-
-    it("should display (please select languge) if the name is passed and the lanuge is not passed",function(){
-
-        const passedNames = greeting()
-        assert.equal(" Please select language",passedNames.noLanguage("Siyabonga" ,"") )
+        const passednumber = apple()
+        assert.equal(55,passednumber.profitExpected(55) )
 
 
 
 
     });
-   
-    
+    it("shoud desplay cost per apple   ",function(){
 
-});
-
-describe("The invelid massages",function(){
-
-    it("should display (please enter a valid name) if the are numbers in the name and lanuge is english",function(){
-
-        const passedNames = greeting()
-        assert.equal("Please enter a valid name",passedNames.invelidName("Siyabonga32","english") )
+        const passednumber = apple()
+        assert.equal(0.5555555555555556,passednumber.costPerApple(50,90) )
 
 
 
 
     });
-    it("should display (nceda ngenisa igama) if the are numbers in the name and lanuge is xhosa",function(){
+    it("shoud desplay packet cost   ",function(){
 
-        const passedNames = greeting()
-        assert.equal("Nceda ngenisa igama",passedNames.invelidName("Siyabonga32","isixhosa") )
+        const passednumber = apple()
+        assert.equal(3.3333333333333335,passednumber.costPricePerapple(50,15) )
 
 
 
 
     });
-    it("should display (Voer asseblief n naam in) if the are numbers in the name and lanuge is afrikaans",function(){
+    it("shoud desplay number of packet that can come from each box   ",function(){
 
-        const passedNames = greeting()
-        assert.equal("Voer asseblief n naam in",passedNames.invelidName("Siyabonga32","afrikaans") )
+        const passednumber = apple()
+        assert.equal(10,passednumber.numberOfPackets(50,5) )
 
 
 
@@ -113,36 +67,3 @@ describe("The invelid massages",function(){
 
 });
 
-describe("The Names that are in the list rejection massages",function(){
-
-    it("should display (Name already exist) if the name is passed in and the lanuge is english",function(){
-
-        const passedNames = greeting()
-        assert.equal("Name already exist",passedNames.existingName("Siyabonga","english") )
-
-
-
-
-    });
-    it("should display (Eligama selikhona) if the name is passed in and the lanuge is xhosa",function(){
-
-        const passedNames = greeting()
-        assert.equal("Eligama selikhona",passedNames.existingName("Siyabonga","isixhosa") )
-
-
-
-
-    });
-    it("should display (Naam bestaan reeds) if the name is passed in and the lanuge is afrikaans",function(){
-
-        const passedNames = greeting()
-        assert.equal("Naam bestaan reeds",passedNames.existingName("Siyabonga","afrikaans") )
-
-
-
-
-    });
-    
-    
-
-});

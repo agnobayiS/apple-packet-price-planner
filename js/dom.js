@@ -1,81 +1,36 @@
-const textBox = document.querySelector(".textBox");
-const greetBtn = document.querySelector(".greetBtn");
-const greetTxt = document.querySelector(".greetText");
-const erroTxt = document.querySelector(".errorTxt");
-const resetBtn = document.querySelector(".restBtn");
-const formInput = document.querySelector(".input-class")
-const counterNumber = document.querySelector(".numberCount");
-
-let data = localStorage.getItem("key") ? JSON.parse(localStorage.getItem("key")) : []
-const factoryFunction = greeting(data);
-
-console.log(data.length);
+const costPrice = document.querySelector(".costPrice");
+const numberOfApples = document.querySelector(".numberOfApples");
+const packetSize = document.querySelector(".packetSize");
+const requidProfit = document.querySelector(".requidProfit");
+const calculateBtn = document.querySelector(".calculate");
+const errorTxt1 = document.querySelector(".errorTxt1");
+const errorTxt2 = document.querySelector(".errorTxt2");
+const errorTxt3 = document.querySelector(".errorTxt3");
+const errorTxt4 = document.querySelector(".errorTxt4");
 
 
-var interger = 0;
-var resertNumber = 0;
-var alphabets = /^[a-zA-Z]+$/g;
-
-counterNumber.innerHTML = data.length;
-
-function greet() {
-    var name = textBox.value.toLowerCase().replace(/^[a-z]{1}/,c=>c.toUpperCase())
+const factoryFunction = apple();
 
 
-    const radioBtn = document.querySelector('input[name="btn"]:checked');
-    erroTxt.innerHTML = " "
 
-    if (alphabets.test(name) && radioBtn !== null) {
-        // data.push(name)
-        greetTxt.innerHTML = factoryFunction.velidName(name, radioBtn.value)
-        localStorage.setItem("key", JSON.stringify(factoryFunction.getArr()));
-        counterNumber.innerHTML = factoryFunction.getArr().length;
-    } else {
 
-        if (radioBtn === null) {
-            greetTxt.innerHTML = " please select language"
-        }
+function apple() {
+   
+    // const calculate = document.querySelector('.calculate');
 
-        else if (data.includes(name) && radioBtn !== null) {
+    errorTxt1.innerHTML = factoryFunction.costPerApple(costPrice,)
+    errorTxt2.innerHTML = factoryFunction.costPricePerapple(numberOfApples.value, numberOfApples.value)
+    errorTxt3.innerHTML = factoryFunction.numberOfPackets(costPrice.value, packetSize.value)
+    errorTxt4.innerHTML = factoryFunction.packet(numberOfApples.value, packetSize.value)
 
-            greetTxt.innerHTML = factoryFunction.existingName(name, radioBtn.value)
+    errorTxt1.innerHTML =firstNumber1
 
-        }
-        else if (alphabets.test(name) === false && radioBtn !== null) {
 
-            greetTxt.innerHTML = factoryFunction.invelidName(name, radioBtn.value)
-        
-        } else {
-
-            // data.push(name)
-            greetTxt.innerHTML = factoryFunction.velidName(name, radioBtn.value)
-            localStorage.setItem("key", JSON.stringify(factoryFunction.getArr()));
-            counterNumber.innerHTML = factoryFunction.getArr().length;
-            
-        }
-    }
     
-    formInput.reset()
-    setTimeout(() => {
-        greetTxt.innerHTML = ''
 
-    }, "3000")
+
 }
+    
 
-greetBtn.addEventListener("click", greet)
+calculateBtn.addEventListener("click", apple)
 
-
-resetBtn.addEventListener("click", function () {
-
-    localStorage.clear();
-    erroTxt.innerHTML = "YOU HAVE CLEARD THE THE MEMORRY"
-    counterNumber.innerHTML = 0;
-    interger = 0
-    greetTxt.innerHTML = ""
-    textBox.innerHTML = "Enter name"
-    setTimeout(() => {
-        location.reload()
-        erroTxt.innerHTML = ""
-    }, "3000")
-
-});

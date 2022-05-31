@@ -1,78 +1,56 @@
-function greeting(data) {
+function apple(cost, numberOfApples, packetSize, requidProfit) {
+    // var requidProfit = requidProfit
+    // var costPrice = costPrice
+    var pacentage = (requidProfit / 100) * numberOfApples
+    var remaining = numberOfApples - pacentage
 
-    
-    var arr = data || []
-    var alphabets = /^[a-zA-Z]+$/g;
 
-    function existingName(name, language) {
-        
-        // if (arr.includes(name)) {
-            if (language === 'english') {
-                return "Name already exist"
-            }
-            else if (language === 'isixhosa') {
-                return "Eligama selikhona"
-            }
-            else if (language === 'afrikaans') {
-                return "Naam bestaan reeds"
-            }
-
-        // }
+    function cost1(cost) {
+        return cost
     }
 
-    function invelidName(name, language) {
+    function ApplesInTheBox(numberOfApples) {
 
-        if (alphabets.test(name) === false) {
-            if (language === 'english') {
-                return 'Please enter a valid name'
-
-            }
-            else if (language === 'isixhosa') {
-                return 'Nceda ngenisa igama'
-
-            }
-
-            else if (language === 'afrikaans') {
-                return 'Voer asseblief n naam in'
-
-            }
-        } 
+        return numberOfApples
     }
 
+    function packet(packetSize) {
 
-    function velidName(name, language) {
+        return packetSize
+    }
+    function profitExpected(requidProfit) {
 
-        arr.push(name)
-        
-        if (language === 'english') {
-            return 'Hello, ' + name
-        }
-        else if (language === 'isixhosa') {
-            return 'Mholo, ' + name
-        }
-        else if (language === 'afrikaans') {
-            
-            return 'Hallo, ' + name
-            
-        }
+        return requidProfit
+    }
+
+    function costPerApple(cost, remaining) {
+
+        return cost / remaining
+    }
+
+    function costPricePerapple(cost, packetSize) {
+
+        return cost / packetSize
+    }
+    function numberOfPackets(numberOfApples, packetSize) {
+
+        return numberOfApples / packetSize
 
     }
-    function getArr() {
-        return arr
-    }
-    function noLanguage(name, language) {
-        if (language === "" && name == name) {
-            return " Please select language"
-        }
-    }
+    // function rytPrice(){
+    //     return cost /
+    // }
+
 
     return {
-        noLanguage,
-        getArr,
-        existingName,
-        invelidName,
-        velidName,
-
+        // rytPrice,
+        cost1,
+        ApplesInTheBox,
+        packet,
+        profitExpected,
+        costPerApple,
+        costPricePerapple,
+        numberOfPackets,
 
     }
 }

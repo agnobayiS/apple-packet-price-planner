@@ -29,5 +29,14 @@ justify-content: center;
 
 
 }
-
+.NumberOfPackets1{
+    padding-left: 155px;
+}.NumberOfPackets2{
+    padding-left: 150px;
+}.NumberOfPackets3{
+    padding-left: 145px;
+}
+.NumberOfPackets4{
+    padding-left: 100px;
+}
 
